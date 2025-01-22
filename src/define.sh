@@ -372,26 +372,26 @@ addFolder() {
   return 0
 }
 
-migrateFiles() {
+# migrateFiles() {
 
-  local base="$1"
-  local version="$2"
-  local file=""
+#   local base="$1"
+#   local version="$2"
+#   local file=""
 
-  [ -f "$base" ] && return 0
+#   [ -f "$base" ] && return 0
 
-  [[ "${version,,}" == "tiny10" ]] && file="tiny10_x64_23h2.iso"
-  [[ "${version,,}" == "tiny11" ]] && file="tiny11_2311_x64.iso"
-  [[ "${version,,}" == "core11" ]] && file="tiny11_core_x64_beta_1.iso"
-  [[ "${version,,}" == "winxpx86" ]] && file="en_windows_xp_professional_with_service_pack_3_x86_cd_x14-80428.iso"
-  [[ "${version,,}" == "winvistax64" ]] && file="en_windows_vista_sp2_x64_dvd_342267.iso"
-  [[ "${version,,}" == "win7x64" ]] && file="en_windows_7_enterprise_with_sp1_x64_dvd_u_677651.iso"
+#   [[ "${version,,}" == "tiny10" ]] && file="tiny10_x64_23h2.iso"
+#   [[ "${version,,}" == "tiny11" ]] && file="tiny11_2311_x64.iso"
+#   [[ "${version,,}" == "core11" ]] && file="tiny11_core_x64_beta_1.iso"
+#   [[ "${version,,}" == "winxpx86" ]] && file="en_windows_xp_professional_with_service_pack_3_x86_cd_x14-80428.iso"
+#   [[ "${version,,}" == "winvistax64" ]] && file="en_windows_vista_sp2_x64_dvd_342267.iso"
+#   [[ "${version,,}" == "win7x64" ]] && file="en_windows_7_enterprise_with_sp1_x64_dvd_u_677651.iso"
 
-  [ ! -f "$STORAGE/$file" ] && return 0
-  mv -f "$STORAGE/$file" "$base" || return 1
+#   [ ! -f "$STORAGE/$file" ] && return 0
+#   mv -f "$STORAGE/$file" "$base" || return 1
 
-  return 0
-}
+#   return 0
+# }
 
 migrateFiles() {
 

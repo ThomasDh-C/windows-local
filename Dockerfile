@@ -42,11 +42,10 @@ ARG VERSION_ARG="0.00"
 RUN echo "$VERSION_ARG" > /run/version
 
 EXPOSE 8006 3389
-# VOLUME /storage
 
-ENV RAM_SIZE "4G"
-ENV CPU_CORES "2"
-ENV DISK_SIZE "30G"
+ENV RAM_SIZE "8G"
+ENV CPU_CORES "8"
+ENV DISK_SIZE "50G"
 ENV VERSION "win11e"
 
 ENTRYPOINT ["/usr/bin/tini", "-s", "/run/entry.sh"]

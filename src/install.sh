@@ -606,7 +606,7 @@ updateXML() {
   local language="$2"
   local culture region user admin pass keyboard
 
-  [ -z "$HEIGHT" ] && HEIGHT="720"
+  [ -z "$HEIGHT" ] && HEIGHT="800"
   [ -z "$WIDTH" ] && WIDTH="1280"
 
   sed -i "s/<VerticalResolution>1080<\/VerticalResolution>/<VerticalResolution>$HEIGHT<\/VerticalResolution>/g" "$asset"

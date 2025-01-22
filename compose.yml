@@ -1,7 +1,7 @@
 services:
   windows:
     image: windows-local
-    container_name: windows
+    container_name: omni-windows
     environment:
       VERSION: "win11e"
     devices:
@@ -9,9 +9,13 @@ services:
     cap_add:
       - NET_ADMIN
     ports:
-      - 8006:8006
-      - 3389:3389/tcp
-      - 3389:3389/udp
+      - 8006:8006       # Web Viewer access
+      - 3389:3389/tcp   # RDP access
+      - 3389:3389/udp   # RDP access
     stop_grace_period: 2m
     volumes:
       - ./custom.iso:/custom.iso
+      - ./init_setup:/oem
+      - ./storage:/storage
+      - ./omniagent:/omniagent  # Mount for live Python code updates
+    
