@@ -35,7 +35,7 @@ boot() {
         grep -Fq "BOOTMGR is missing" "$QEMU_PTY" && fail="y"
       fi
       if [ -z "$fail" ]; then
-        info "Windows has started successfully. You can connect using either a web browser or RDP, both accessible at localhost on the specified ports..."
+        info "Windows has started successfully. You can directly view the VM at http://localhost:8006/vnc.html?view_only=1&autoconnect=1&resize=scale. Wait until setup is complete before interacting manually."
         return 0
       fi
     fi

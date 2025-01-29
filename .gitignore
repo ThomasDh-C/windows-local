@@ -1,4 +1,4 @@
 custom.iso
 /vm/win11storage
-vm/win11setup/setupscripts/ps_script_log.txt
+vm/win11setup/setupscripts/firstboot_log.txt
 vm/win11setup/setupscripts/server/server.log
