@@ -5,7 +5,7 @@ else
     echo "Image found locally. Skipping build."
 fi
 
-docker compose -f ../docker-compose.yml up
+docker compose -f ../compose.yml up
 
 # Wait for the VM to start up
 while true; do

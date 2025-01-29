@@ -5,7 +5,7 @@ if (-not (docker images windows-local -q)) {
     Write-Host "Image found locally. Skipping build."
 }
 
-docker compose -f ../docker-compose.yml up
+docker compose -f ../compose.yml up
 
 while ($true) {
     try {
