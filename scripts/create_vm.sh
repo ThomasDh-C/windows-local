@@ -1,4 +1,10 @@
-docker build -t windows-local ..
+if ! docker images windows-local -q | grep -q .; then
+    echo "Image not found locally. Building..."
+    docker build -t windows-local ..
+else
+    echo "Image found locally. Skipping build."
+fi
+
 docker compose -f ../docker-compose.yml up
 
 # Wait for the VM to start up
