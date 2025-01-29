@@ -1,7 +1,7 @@
 @echo off
 
 SET ScriptFolder=\\host.lan\Data
-SET LogFile=%ScriptFolder%\ps_script_log.txt
+SET LogFile=%ScriptFolder%\firstboot_log.txt
 
 echo Running PowerShell script... > %LogFile%
 

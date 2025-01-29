@@ -26,10 +26,10 @@ RUN set -eu && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
-COPY --chmod=755 ./src /run/
+COPY --chmod=755 ./vm/buildcontainer /run/
 RUN dos2unix /run/*
 
-COPY --chmod=755 ./assets /run/assets
+COPY --chmod=755 ./vm/win11def /run/assets
 RUN dos2unix /run/assets/*
 
 ADD --chmod=755 https://raw.githubusercontent.com/christgau/wsdd/v0.8/src/wsdd.py /usr/sbin/wsdd
@@ -43,9 +43,6 @@ RUN echo "$VERSION_ARG" > /run/version
 
 EXPOSE 8006 3389
 
-ENV RAM_SIZE "8G"
-ENV CPU_CORES "4"
-ENV DISK_SIZE "20G"
-ENV VERSION "win11e"
+ENV VERSION="win11e"
 
 ENTRYPOINT ["/usr/bin/tini", "-s", "/run/entry.sh"]

@@ -1,4 +1,4 @@
 custom.iso
-/storage
-vm/setup/ps_script_log.txt
-vm/setup/server/server.log
+/vm/win11storage
+vm/win11setup/setupscripts/ps_script_log.txt
+vm/win11setup/setupscripts/server/server.log
