@@ -12,10 +12,11 @@ services:
       - 8006:8006       # Web Viewer access
       - 3389:3389/tcp   # RDP access
       - 3389:3389/udp   # RDP access
+      - 5000:5000       # Computer control server
     stop_grace_period: 2m
     volumes:
-      - ./custom.iso:/custom.iso
-      - ./init_setup:/oem
+      - ./vm/image/custom.iso:/custom.iso
+      - ./vm/setup:/oem
+      - ./vm/setup:/data
       - ./storage:/storage
-      - ./omniagent:/omniagent  # Mount for live Python code updates
     

@@ -26,7 +26,7 @@ addShare() {
     chmod 777 "$dir"
 
     {      echo "--------------------------------------------------------"
-            echo " $APP for Docker v$(</run/version)..."
+            echo " $APP"
             echo " For support visit $SUPPORT"
             echo "--------------------------------------------------------"
             echo ""

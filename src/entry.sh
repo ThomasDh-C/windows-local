@@ -3,8 +3,8 @@ set -Eeuo pipefail
 
 : "${BOOT_MODE:="windows"}"
 
-APP="Windows"
-SUPPORT="https://github.com/dockur/windows"
+APP="OmniParser Windows"
+SUPPORT="https://github.com/microsoft/OmniParser"
 
 cd /run
 
